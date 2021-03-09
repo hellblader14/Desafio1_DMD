@@ -1,0 +1,2173 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/5/2021 4:44:47 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-17S69D1"
+  DTS:CreatorName="DESKTOP-17S69D1\Jonathan"
+  DTS:DTSID="{D5C30CE2-05C2-432C-8584-8FF8A56955C8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{9357C1C3-537F-4708-A7FA-C72419ABF719}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{740A3C53-DDE8-492A-9ACD-E98885A3B7B0}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Jonathan\Desktop\Diego\SpaCentro_m20191007.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{4A0005E1-2D06-41DC-93AD-90E69FFF58AE}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Jonathan\Desktop\Diego\SpaEscalon_i20191007.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B1E66417-E2D9-4F03-AECF-750E6910C183}"
+      DTS:ObjectName="Administrador de conexiones con Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Jonathan\Desktop\Diego\SpaSantaTecla_m20191007.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{73E3414C-99EC-431F-8FE6-59C5CC3A7857}"
+      DTS:ObjectName="Administrador de conexiones con Excel 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Jonathan\Desktop\Desafio1_Ejericio1\SpaCentro_m20191007.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{127D7879-CFC5-4046-B9EC-718769ED7189}"
+      DTS:ObjectName="Administrador de conexiones con Excel 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Jonathan\Desktop\Desafio1_Ejericio1\SpaEscalon_i20191007.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 5]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{A640E184-846A-4A59-AA34-4D585DAE8536}"
+      DTS:ObjectName="Administrador de conexiones con Excel 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Jonathan\Desktop\Desafio1_Ejericio1\SpaSantaTecla_m20191007.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-17S69D1.Diego_database]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{6B18C53B-8F4F-4551-9994-61CD6FD23681}"
+      DTS:ObjectName="DESKTOP-17S69D1.Diego_database">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-17S69D1;Initial Catalog=Diego_database;Integrated Security=True;Application Name=SSIS-Package-{6B18C53B-8F4F-4551-9994-61CD6FD23681}DESKTOP-17S69D1.Diego_database;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2703914B-F89C-498D-B04F-54A2D5EAE392}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Sexo]"
+                      cachedDataType="r8"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ingresos]"
+                      cachedDataType="r8"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PromVisit]"
+                      cachedDataType="r8"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Sauna]"
+                      cachedDataType="r8"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Masaje]"
+                      cachedDataType="r8"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Hidro]"
+                      cachedDataType="r8"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Yoga]"
+                      cachedDataType="r8"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Sucursal]"
+                      cachedDataType="r8"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sexo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ingresos]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[PromVisit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Edad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Edad]"
+                      name="Edad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sauna]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sauna]"
+                      name="Sauna"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Masaje]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Masaje]"
+                      name="Masaje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Hidro]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Hidro]"
+                      name="Hidro"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Yoga]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Yoga]"
+                      name="Yoga"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sucursal]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\DATABASE DIEGO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DATABASE DIEGO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."cliente"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DATABASE DIEGO.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-17S69D1.Diego_database]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-17S69D1.Diego_database]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Sexo]"
+                      cachedDataType="i4"
+                      cachedName="Sexo"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_genero]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[ingresos]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ingresos"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ingresos]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[PromVisit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="PromVisit"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[promovisit]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[PromVisit]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Edad]"
+                      cachedDataType="i4"
+                      cachedName="Edad"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[edad]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Edad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Sauna]"
+                      cachedDataType="i4"
+                      cachedName="Sauna"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[sauna]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sauna]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Masaje]"
+                      cachedDataType="i4"
+                      cachedName="Masaje"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[masaje]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Masaje]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Hidro]"
+                      cachedDataType="i4"
+                      cachedName="Hidro"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[hidro]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Hidro]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Yoga]"
+                      cachedDataType="i4"
+                      cachedName="Yoga"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[yoga]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].Columns[Sucursal]"
+                      cachedDataType="i4"
+                      cachedName="Sucursal"
+                      externalMetadataColumnId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_sucursal]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Sucursal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="100"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_genero]"
+                      dataType="i4"
+                      name="id_genero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ingresos]"
+                      dataType="wstr"
+                      length="100"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[promovisit]"
+                      dataType="wstr"
+                      length="100"
+                      name="promovisit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[edad]"
+                      dataType="i4"
+                      name="edad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[sauna]"
+                      dataType="i4"
+                      name="sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[masaje]"
+                      dataType="i4"
+                      name="masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[hidro]"
+                      dataType="i4"
+                      name="hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[yoga]"
+                      dataType="i4"
+                      name="yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_sucursal]"
+                      dataType="i4"
+                      name="id_sucursal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DATABASE DIEGO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DATABASE DIEGO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DATABASE DIEGO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DATABASE DIEGO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SPA CENTRO"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="SPA CENTRO"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'SpaCentro_m20191007 (2)$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SPA CENTRO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sexo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[ingresos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[PromVisit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Edad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Edad]"
+                      name="Edad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sauna]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Masaje]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Hidro]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Yoga]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sucursal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Sucursal]"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      dataType="r8"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[ingresos]"
+                      dataType="r8"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[PromVisit]"
+                      dataType="r8"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Edad]"
+                      dataType="r8"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Sauna]"
+                      dataType="r8"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Masaje]"
+                      dataType="r8"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Hidro]"
+                      dataType="r8"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Yoga]"
+                      dataType="r8"
+                      name="Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].ExternalColumns[Sucursal]"
+                      dataType="r8"
+                      name="Sucursal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      name="Sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[ingresos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[ingresos]"
+                      name="ingresos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[PromVisit]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[PromVisit]"
+                      name="PromVisit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Edad]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Edad]"
+                      name="Edad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Sauna]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Sauna]"
+                      name="Sauna" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Masaje]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Masaje]"
+                      name="Masaje" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Hidro]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Hidro]"
+                      name="Hidro" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Yoga]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Yoga]"
+                      name="Yoga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Sucursal]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[Sucursal]"
+                      name="Sucursal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SPA ESCALON"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="SPA ESCALON"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'SpaEscalon_i20191007 (2)$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SPA ESCALON.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sexo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[ingresos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[PromVisit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Edad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Edad]"
+                      name="Edad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sauna]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Masaje]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Hidro]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Yoga]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sucursal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Sucursal]"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      dataType="r8"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[ingresos]"
+                      dataType="r8"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[PromVisit]"
+                      dataType="r8"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Edad]"
+                      dataType="r8"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Sauna]"
+                      dataType="r8"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Masaje]"
+                      dataType="r8"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Hidro]"
+                      dataType="r8"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Yoga]"
+                      dataType="r8"
+                      name="Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].ExternalColumns[Sucursal]"
+                      dataType="r8"
+                      name="Sucursal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      name="Sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[ingresos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[ingresos]"
+                      name="ingresos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[PromVisit]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[PromVisit]"
+                      name="PromVisit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Edad]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Edad]"
+                      name="Edad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Sauna]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Sauna]"
+                      name="Sauna" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Masaje]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Masaje]"
+                      name="Masaje" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Hidro]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Hidro]"
+                      name="Hidro" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Yoga]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Yoga]"
+                      name="Yoga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Sucursal]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[Sucursal]"
+                      name="Sucursal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SPA SANTA TECLA"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="SPA SANTA TECLA"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'SpaSantaTecla_m20191007 (2)$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SPA SANTA TECLA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 5]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 5]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sexo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[ingresos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[PromVisit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Edad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Edad]"
+                      name="Edad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sauna]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Masaje]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Hidro]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Yoga]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sucursal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Sucursal]"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Sexo]"
+                      dataType="r8"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[ingresos]"
+                      dataType="r8"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[PromVisit]"
+                      dataType="r8"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Edad]"
+                      dataType="r8"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Sauna]"
+                      dataType="r8"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Masaje]"
+                      dataType="r8"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Hidro]"
+                      dataType="r8"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Yoga]"
+                      dataType="r8"
+                      name="Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].ExternalColumns[Sucursal]"
+                      dataType="r8"
+                      name="Sucursal" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Sexo]"
+                      name="Sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[ingresos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[ingresos]"
+                      name="ingresos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[PromVisit]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[PromVisit]"
+                      name="PromVisit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Edad]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Edad]"
+                      name="Edad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Sauna]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Sauna]"
+                      name="Sauna" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Masaje]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Masaje]"
+                      name="Masaje" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Hidro]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Hidro]"
+                      name="Hidro" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Yoga]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Yoga]"
+                      name="Yoga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Sucursal]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[Sucursal]"
+                      name="Sucursal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Sexo]"
+                      cachedDataType="r8"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[ingresos]"
+                      cachedDataType="r8"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[PromVisit]"
+                      cachedDataType="r8"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Sauna]"
+                      cachedDataType="r8"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Masaje]"
+                      cachedDataType="r8"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Hidro]"
+                      cachedDataType="r8"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Yoga]"
+                      cachedDataType="r8"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Sucursal]"
+                      cachedDataType="r8"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output].Columns[Sucursal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Sexo]"
+                      cachedDataType="r8"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[ingresos]"
+                      cachedDataType="r8"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[PromVisit]"
+                      cachedDataType="r8"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Sauna]"
+                      cachedDataType="r8"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Masaje]"
+                      cachedDataType="r8"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Hidro]"
+                      cachedDataType="r8"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Yoga]"
+                      cachedDataType="r8"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Sucursal]"
+                      cachedDataType="r8"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output].Columns[Sucursal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Sexo]"
+                      cachedDataType="r8"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[ingresos]"
+                      cachedDataType="r8"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[PromVisit]"
+                      cachedDataType="r8"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Sauna]"
+                      cachedDataType="r8"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Masaje]"
+                      cachedDataType="r8"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Hidro]"
+                      cachedDataType="r8"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Yoga]"
+                      cachedDataType="r8"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3].Columns[Sucursal]"
+                      cachedDataType="r8"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output].Columns[Sucursal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      name="Sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      name="ingresos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      name="PromVisit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      name="Edad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sauna]"
+                      name="Sauna" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Masaje]"
+                      name="Masaje" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Hidro]"
+                      name="Hidro" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Yoga]"
+                      name="Yoga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Sucursal]"
+                      name="Sucursal" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\DATABASE DIEGO.Inputs[Entrada de destino de ADO NET]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\SPA CENTRO.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output1]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\SPA ESCALON.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output2]"
+              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\SPA SANTA TECLA.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="91,21" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Data Flow Task\DATABASE DIEGO"
+          TopLeft="308,293" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Data Flow Task\SPA SANTA TECLA"
+          TopLeft="489,50" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Data Flow Task\SPA CENTRO"
+          TopLeft="91,56" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="303,124" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Data Flow Task\SPA ESCALON"
+          TopLeft="278.5,37.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="306,211" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="363.5,166">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.5,45"
+              Start="0,0"
+              End="20.5,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="16.5,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,22.5"
+                    Point2="20.5,22.5"
+                    Point3="20.5,26.5" />
+                  <mssgle:LineSegment
+                    End="20.5,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output2]"
+          TopLeft="572,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-180.25,32"
+              Start="0,0"
+              End="-180.25,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8733153638814" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8733153638814"
+                    Point2="0,20.8733153638814"
+                    Point3="-4,20.8733153638814" />
+                  <mssgle:LineSegment
+                    End="-176.25,20.8733153638814" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-176.25,20.8733153638814"
+                    Point2="-180.25,20.8733153638814"
+                    Point3="-180.25,24.8733153638814" />
+                  <mssgle:LineSegment
+                    End="-180.25,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
+          TopLeft="351,79.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,44.5"
+              Start="0,0"
+              End="12.5,37">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.25"
+                    Point2="0,22.25"
+                    Point3="4,22.25" />
+                  <mssgle:LineSegment
+                    End="8.5,22.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,22.25"
+                    Point2="12.5,22.25"
+                    Point3="12.5,26.25" />
+                  <mssgle:LineSegment
+                    End="12.5,37" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="161,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="174.25,26"
+              Start="0,0"
+              End="174.25,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.9595687331536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9595687331536"
+                    Point2="0,16.9595687331536"
+                    Point3="4,16.9595687331536" />
+                  <mssgle:LineSegment
+                    End="170.25,16.9595687331536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="170.25,16.9595687331536"
+                    Point2="174.25,16.9595687331536"
+                    Point3="174.25,20.9595687331536" />
+                  <mssgle:LineSegment
+                    End="174.25,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="387.25,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DATABASE DIEGO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SPA SANTA TECLA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SPA CENTRO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SPA ESCALON">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
